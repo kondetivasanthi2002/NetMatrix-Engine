@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NetMatrix Enterprise Network Observability Suite</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0f172a; color: #f8fafc; margin: 0; padding: 20px; }
+        .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #334155; padding-bottom: 15px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px; }
+        .card { background-color: #1e293b; border-radius: 8px; padding: 20px; border: 1px solid #334155; }
+        .card h3 { color: #38bdf8; margin-top: 0; }
+        .metric-value { font-size: 2.2rem; font-weight: bold; color: #4ade80; }
+        .log-box { background-color: #020617; border-radius: 4px; padding: 10px; font-family: monospace; font-size: 0.9rem; color: #94a3b8; height: 150px; overflow-y: auto; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>⚡ NetMatrix Enterprise Network Observability Suite</h1>
+        <div><span style="color: #4ade80;">● SYSTEM ONLINE</span> | Node: netmatrix-core-01</div>
+    </div>
+    <div class="grid">
+        <div class="card">
+            <h3>Network Throughput</h3>
+            <div class="metric-value">12.4 Gbps</div>
+            <p>Active Interfaces: 8 (100% operational)</p>
+        </div>
+        <div class="card">
+            <h3>Packets Processed / Sec</h3>
+            <div class="metric-value">1,450,200 pps</div>
+            <p>Zero Packet Drop Rate</p>
+        </div>
+        <div class="card">
+            <h3>Stateful Firewall Connections</h3>
+            <div class="metric-value">45,820</div>
+            <p>Active Conntrack Sessions</p>
+        </div>
+        <div class="card">
+            <h3>Topology Nodes</h3>
+            <div class="metric-value">128 Routers</div>
+            <p>OSPF & BGP Mesh Converged</p>
+        </div>
+    </div>
+    <div class="card" style="margin-top: 20px;">
+        <h3>Live Event & Packet Telemetry Feed</h3>
+        <div class="log-box">
+            [10:15:02] INFO - EthernetFrame parsed from src=00:11:22:33:44:55 dst=ff:ff:ff:ff:ff:ff (ARP Request)<br>
+            [10:15:03] INFO - IPv4Packet routed: src=192.168.10.15 dst=10.0.0.1 (NextHop: 10.0.0.254, TTL: 63)<br>
+            [10:15:04] INFO - StatefulFirewall ACCEPT rule #100 matched src=192.168.10.15 dst_port=443 (HTTPS)<br>
+            [10:15:05] INFO - OSPF Neighbor adjacency formed: Router_Core_1 <-> Router_Core_2 (Full State)<br>
+            [10:15:06] INFO - NAT Engine SNAT translated 192.168.10.15:52140 -> 203.0.113.1:10045
+        </div>
+    </div>
+</body>
+</html>
