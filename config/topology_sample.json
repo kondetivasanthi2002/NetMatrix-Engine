@@ -1,0 +1,13 @@
+{
+  "nodes": [
+    {"id": "Router_Core_1", "type": "ROUTER", "ip": "10.0.0.1"},
+    {"id": "Router_Core_2", "type": "ROUTER", "ip": "10.0.0.2"},
+    {"id": "Switch_Access_1", "type": "SWITCH", "ip": "10.0.1.1"},
+    {"id": "Firewall_Edge", "type": "FIREWALL", "ip": "10.0.2.1"}
+  ],
+  "links": [
+    {"source": "Router_Core_1", "target": "Router_Core_2", "cost": 10, "bandwidth_mbps": 10000},
+    {"source": "Router_Core_1", "target": "Switch_Access_1", "cost": 5, "bandwidth_mbps": 1000},
+    {"source": "Router_Core_2", "target": "Firewall_Edge", "cost": 15, "bandwidth_mbps": 10000}
+  ]
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "rule_id": 100,
+    "action": "ACCEPT",
+    "protocol": "TCP",
+    "src_network": "192.168.10.0/24",
+    "dst_port": 443,
+    "description": "Allow outbound HTTPS traffic"
+  },
+  {
+    "rule_id": 101,
+    "action": "ACCEPT",
+    "protocol": "UDP",
+    "src_network": "192.168.10.0/24",
+    "dst_port": 53,
+    "description": "Allow DNS query traffic"
+  },
+  {
+    "rule_id": 200,
+    "action": "DROP",
+    "protocol": "TCP",
+    "src_network": "0.0.0.0/0",
+    "dst_port": 23,
+    "description": "Block Telnet protocol"
+  }
+]

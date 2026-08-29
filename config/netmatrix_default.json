@@ -1,0 +1,27 @@
+{
+  "system": {
+    "node_name": "netmatrix-core-gateway-01",
+    "environment": "production",
+    "log_level": "INFO"
+  },
+  "network": {
+    "primary_interface": "eth0",
+    "ip_address": "192.168.10.1",
+    "netmask": "255.255.255.0",
+    "gateway": "192.168.10.254",
+    "mtu": 1500,
+    "promiscuous_mode": false
+  },
+  "security": {
+    "firewall_active": true,
+    "ids_signature_inspection": true,
+    "strict_tcp_handshake": true,
+    "default_inbound_policy": "DENY",
+    "default_outbound_policy": "ALLOW"
+  },
+  "telemetry": {
+    "prometheus_export_port": 9090,
+    "metrics_scrape_interval_seconds": 15,
+    "netflow_export_port": 2055
+  }
+}
